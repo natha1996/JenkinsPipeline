@@ -54,12 +54,12 @@ pipeline {
 post {
     success {
         mail to: 'nathashaliyanage96@gmail.com',
-             subject: "Pipeline Success: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+             subject: "Pipeline Success",
              body: "The pipeline has completed successfully."
     }
     failure {
         mail to: 'nathashaliyanage96@gmail.com',
-             subject: "Pipeline Failure: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+             subject: "Pipeline Failure",
              body: "The pipeline has failed. Check Jenkins logs for details."
     }
 }
