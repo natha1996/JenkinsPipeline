@@ -51,16 +51,16 @@ pipeline {
             }
         }
     }
-post {
-    success {
-        mail to: 'nathashaliyanage96@gmail.com',
-             subject: "Pipeline Success",
-             body: "The pipeline has completed successfully."
+    post {
+        success {
+            mail to: 'nathashaliyanage96@gmail.com',
+                 subject: "Pipeline Success",
+                 body: "The pipeline has completed successfully."
+        }
+        failure {
+            mail to: 'nathashaliyanage96@gmail.com',
+                 subject: "Pipeline Failure",
+                 body: "The pipeline has failed. Check Jenkins logs for details."
+        }
     }
-    failure {
-        mail to: 'nathashaliyanage96@gmail.com',
-             subject: "Pipeline Failure",
-             body: "The pipeline has failed. Check Jenkins logs for details."
-    }
-}
 }
